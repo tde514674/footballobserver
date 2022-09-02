@@ -12,9 +12,8 @@ import java.util.Scanner;
  */
 public class Footballobserver {
 
-    /**
-     * 
-     */
+    
+    //method ใส่ผลคะแนนฟุตบอล
     public static String inputScore(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Score :");
@@ -23,10 +22,12 @@ public class Footballobserver {
     }
     
     public static void main(String[] args) {
+        //สร้าง subject
         Subject subject = new Subject();
         
-        new ScoreObserver1(subject);
-        new ScoreObserver2(subject);
+        //สร้าง Observer ขึ้นมา 2 ตัว
+        new ScoreObserver(subject);
+        new ScoreObserver(subject);
         
         String score = inputScore();
         while(!score.equals("")){

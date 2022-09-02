@@ -9,6 +9,7 @@ package footballobserver;
  *
  * @author Tinip
  */
+//สร้าง observer เป็น abstract class
 public abstract class Observer {
     protected Subject subject;
     public abstract void update();

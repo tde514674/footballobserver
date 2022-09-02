@@ -9,9 +9,10 @@ package footballobserver;
  *
  * @author Tinip
  */
-public class ScoreObserver1 extends Observer{
+//ให้ ScoreObserver เป็น sub-class ของ Observer เพื่อที่จะได้ใช้คำสั่งของคลาส Observer และ Subject ได้
+public class ScoreObserver extends Observer{
 
-    public ScoreObserver1(Subject subject) {
+    public ScoreObserver(Subject subject) {
         this.subject = subject;
         this.subject.attach(this);
     }
